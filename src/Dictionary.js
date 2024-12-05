@@ -6,7 +6,6 @@ import Results from "./Results";
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
-  let [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
     setResults(response.data);
@@ -51,7 +50,7 @@ export default function Dictionary(props) {
                 type="submit"
                 id="button-addon1"
               >
-                <i className="bi bi-search"></i> {/* Ícone da lupa */}
+                <i className="bi bi-search"></i>
               </button>
             </div>
           </form>
