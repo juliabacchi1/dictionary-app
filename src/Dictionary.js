@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
@@ -21,35 +21,43 @@ export default function Dictionary(props) {
   }
 
   function handleKeywordChange(event) {
-    // console.log(event.target.value);
     setKeyword(event.target.value);
   }
 
-  function load() {
-    setLoaded(true);
+  function handleSubmit(event) {
+    event.preventDefault();
     search();
   }
 
-  if (loaded) {
-    return (
-      <div>
-        <div className="Dictionary">
-          <section>
-            <form onSubmit={search}>
+  useEffect(() => {
+    search();
+  }, []);
+
+  return (
+    <div>
+      <div className="Dictionary">
+        <section>
+          <form className="form-inline" onSubmit={handleSubmit}>
+            <div className="input-group">
               <input
                 type="search"
+                className="form-control"
+                value={keyword}
                 onChange={handleKeywordChange}
-                defaultValue={props.defaultKeyword}
                 placeholder="Search for a word"
               />
-            </form>
-          </section>
-        </div>
-        <Results results={results} />
+              <button
+                className="input-group-text btn"
+                type="submit"
+                id="button-addon1"
+              >
+                <i className="bi bi-search"></i> {/* Ícone da lupa */}
+              </button>
+            </div>
+          </form>
+        </section>
       </div>
-    );
-  } else {
-    load();
-    return "Loading";
-  }
+      <Results results={results} />
+    </div>
+  );
 }

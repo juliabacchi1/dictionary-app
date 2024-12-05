@@ -1,5 +1,19 @@
-.Dictionary input {
-  width: 100%;
+.Dictionary section {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  margin: 20px 0;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-inline .form-control {
+  flex: 1; /* Faz o input ocupar o espaço disponível */
   border-radius: 10px;
   padding: 18px 10px;
   color: #333;
@@ -7,10 +21,26 @@
   font-size: 14px;
 }
 
-.Dictionary section {
-  background: white;
-  padding: 30px;
+.form-inline .btn {
+  padding: 18px 15px; /* Ajusta o tamanho do botão */
   border-radius: 10px;
-  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
-  margin: 20px 0;
+  font-size: 14px;
+  border: 1px solid #b0b0b0;
+}
+
+.input-group .form-control {
+  border-radius: 20px 0 0 20px; /* Bordas arredondadas no input */
+}
+
+.input-group .input-group-text {
+  background: white; /* Fundo branco para o ícone */
+  border: 1px solid #b0b0b0; /* Bordas iguais às do input */
+  border-left: none; /* Remove a borda à esquerda */
+  border-radius: 0 20px 20px 0; /* Arredonda apenas o lado direito */
+  padding: 10px;
+}
+
+.input-group .bi-search {
+  font-size: 16px; /* Tamanho do ícone */
+  color: #666; /* Cor do ícone */
 }
