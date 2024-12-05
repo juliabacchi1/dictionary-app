@@ -22,6 +22,10 @@
 .Meaning .Synonym {
   margin-top: 14px;
   font-size: 14px;
+  white-space:normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .Each-synonym {
