@@ -4,8 +4,29 @@
   font-weight: bold;
 }
 
-.Meaning .example {
+.Meaning {
+  margin: 20px 0;
+}
+
+.Meaning .Definition {
+  font-size: 15px;
+}
+
+.Meaning .Example {
   color: #70757a;
   font-style: italic;
   margin-top: 10px;
+  font-size: 14px;
+}
+
+.Meaning .Synonym {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.Each-synonym {
+border-radius: 40px;
+border: 1px solid #70757a;
+padding: 5px 15px;
+margin-right: 10px;
 }
