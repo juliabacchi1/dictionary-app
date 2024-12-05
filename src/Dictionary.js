@@ -6,6 +6,7 @@ import Results from "./Results";
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
     setResults(response.data);
@@ -30,6 +31,7 @@ export default function Dictionary(props) {
 
   useEffect(() => {
     search();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
