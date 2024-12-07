@@ -3,7 +3,6 @@ import { createClient } from "pexels";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
-import Photos from "./Photos";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
