@@ -1,6 +1,7 @@
 import "./Results.css";
 import React from "react";
 import Meaning from "./Meaning";
+import Photos from "./Photos";
 
 export default function Results(props) {
   console.log(props.results);
@@ -20,6 +21,7 @@ export default function Results(props) {
             );
           })}
         {props.results.status && <>{props.results.message}</>}
+        <Photos photos={props.photos} />
       </div>
     );
   } else {
